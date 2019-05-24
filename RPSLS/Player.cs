@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace RPSLS_Game
+namespace RPSLS
 {
     public abstract class Player
     {
-
         // member variables (HAS A...)
         //Player Score
         public int score;
@@ -21,12 +22,10 @@ namespace RPSLS_Game
         // Constructor(spawner)
         //ALWAYS HAS LIST<T> STRING GESTURE OPTIONS
 
+
+
         public Player(string name)
         {
-           
-
-            
-
             this.gestures = new List<string>();
             gestures.Add("Rock");
             gestures.Add("Paper");
@@ -36,30 +35,27 @@ namespace RPSLS_Game
         }
 
 
-
-
-
-
-
         // Member Methods (CAN DO...)
-
-        //CAN DO DISPLAY P1 GESTURE CHOICE();
-        public abstract void ChooseGesture();
-
-
 
         public void PlayerName()
         {
+            Console.WriteLine("Enter your name");
             Console.ReadLine();
-
         }
 
+        public virtual void ChooseGesture()
+        {
+            Console.WriteLine("choose your gesture");
+            Console.ReadLine();
+        }
 
         //_______________________________-
         public void DisplayGestureChoice()
         {
-            Console.ReadLine();
+
             Console.WriteLine($"{name}'s choice is " + gesture);
+            Console.ReadLine();
+            
         }
         //CAN DO DISPLAY P2 GESTURE CHOICE();
 
@@ -69,5 +65,14 @@ namespace RPSLS_Game
         //    }
         //    //CAN DO DISPLAY COMPUTER GESTURE CHOICE();
         //}
+        public void Player1Score()
+        {
+            int[] Player1Score = new int[2];
+        }
+        public void Player2Score()
+        {
+            int[] Player2Score = new int[2];
+        }
     }
+
 }

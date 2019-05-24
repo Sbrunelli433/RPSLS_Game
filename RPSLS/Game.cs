@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace RPSLS_Game
+namespace RPSLS
 {
-    class Game
+    public class Game
     {
         // member variables (HAS A...)
         //has a PVP
         //public string playerVersusPlayer;
         //HAS A P1 SCORE
-        //public int player1Score;
+        //public int Player1Score;
         Player Player1;
         Player Player2;
 
         //HAS A P2 SCORE
-        //public int player2Score;
-        //Computer computer = new Computer();
+        //public int Player2Score;
 
 
         // Constructor(spawner)
@@ -36,10 +37,15 @@ namespace RPSLS_Game
         //CAN DO  MASTER RUN FUNCTION();
         //PICK PLAYER();
 
-        //public abstract void RunGame()
-        //{
+        public void RunGame()
+        {
+            int numberOfPlayers = GetNumberOfHumanPlayers();
+            SetPlayers(numberOfPlayers);
 
-        //}
+
+
+        }
+        
 
         public int GetNumberOfHumanPlayers()
         {
@@ -47,42 +53,44 @@ namespace RPSLS_Game
             int numberOfPlayers = int.Parse(Console.ReadLine());
             return numberOfPlayers;
         }
+        
         public void SetPlayers(int numberOfPlayers)
         {
-            if(numberOfPlayers == 1)
+            if (numberOfPlayers == 1)
             {
                 Player1 = new Human("Player1");
                 Player2 = new Computer("Player2");
+                Console.WriteLine("This is a single player game");
+                Console.ReadLine();
             }
-            else if(numberOfPlayers == 2)
+            else if (numberOfPlayers == 2)
             {
-                //Player_1 = new Human("Player1");
-                //Player_2 = new Human("Player2");
+                Player1 = new Human("Player1");
+                Player2 = new Human("Player2");
+                Console.WriteLine("This is a multi player game");
+                Console.ReadLine();
+
             }
-           
+
+
         }
 
-        //public void DisplayStuff()
-        //{
-        //    Player1.DisplayGestureChoice();
-        //    Player2.DisplayGestureChoice();
-        //}
+
         //public void MakeGestures()
         //{
-            //player1.ChooseGesture();
-            //player2.ChooseGesture();
+        //    Player.ChooseGesture();
+        //    Player.ChooseGesture();
         //}
-       
-            //for loop the following
-                //Player choose gestures();
-                //Compare Gestures ();
-                    //P1 GESTURE CHOICE(); FROM PLAYER OBJECT
-              
-                        //Player.DisplayGestureChoiceP1();
 
 
-                    //P2 GESTURE CHOICE(); FROM PLAYER OBJECT
-                        //player2.DisplayGestureChoiceP2();
+
+
+        //for loop the following
+        //Player choose gestures();
+        //Compare Gestures ();
+        //P1 ChooseGesture(); FROM PLAYER OBJECT
+        //P2 ChooseGesture(); FROM PLAYER OBJECT
+
 
         //Determine Victory();
         //SWITCH CASE THROUGH LIST<T> OPTIONS FOR WIN(); FROM PLAYER OBJECT
@@ -118,8 +126,6 @@ namespace RPSLS_Game
         //}
         //BREAK;
         //DEFAULT....RESTART LOOP;
-
-        //
-        //
     }
 }
+

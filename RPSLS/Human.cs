@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace RPSLS_Game
+namespace RPSLS
 {
     public class Human : Player
     {
-
         // member variables (HAS A...)
 
 
@@ -24,26 +25,11 @@ namespace RPSLS_Game
 
         public override void ChooseGesture()
         {
-            Console.WriteLine("Choose Gesture");
+            Console.WriteLine("Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
             gesture = Console.ReadLine();
-
-          
         }
-
-        public void P1GestureChoice()
-        {
-            Console.WriteLine("Choose Gesture");
-            Console.ReadLine();
-
-            
-
-        }
-        //public override void P2GestureChoice()
-        //{
-        //    base.DisplayGestureChoiceP2();
-
-        //    Console.ReadLine();
-        //}
 
     }
+
+
 }

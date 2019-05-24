@@ -1,0 +1,7 @@
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.cache
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\bin\Debug\RPSLS.exe.config
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\bin\Debug\RPSLS.exe
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\bin\Debug\RPSLS.pdb
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\obj\Debug\RPSLS.exe
+C:\Users\brune\Desktop\DCC\Week_03\RPSLS_Game\RPSLS\obj\Debug\RPSLS.pdb
