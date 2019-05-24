@@ -28,7 +28,7 @@ namespace RPSLS
 
             if (numberOfPlayers != 1 && numberOfPlayers != 2)
             {
-                Console.WriteLine("please enter 1 or 2....NOTHING ELSE OR YOU'LL ALMOST KINDA BREAK THE GAME");
+                Console.WriteLine("please enter 1 or 2....This is Nevin-Proofed");
                 GetNumberOfHumanPlayers();
             }
             return numberOfPlayers;
@@ -82,63 +82,54 @@ namespace RPSLS
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Scissors" && Player2.gesture == "Paper") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Scissors" && Player2.gesture == "Lizard") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Paper" && Player2.gesture == "Rock") 
             {
-                Console.WriteLine("Paper covers Rock! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Paper" && Player2.gesture == "Spock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Lizard" && Player2.gesture == "Spock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Lizard" && Player2.gesture == "Paper") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Spock" && Player2.gesture == "Scissors") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == "Spock" && Player2.gesture == "Rock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
-
                 Player1.score++;
             }
             else if (Player1.gesture == Player2.gesture)
@@ -148,6 +139,8 @@ namespace RPSLS
             }
             else
             {
+                Console.WriteLine("Player 2 wins!");
+                Console.ReadLine();
                 Player2.score++;
             }
         }
@@ -167,7 +160,7 @@ namespace RPSLS
             }
             else if(Player1.score <= 1 && Player2.score <= 1)
             {
-                Console.WriteLine("Player1's score is" + Player1.score + "and Player2's score is " + Player2.score);
+                Console.WriteLine("Player1's score is" + " " + Player1.score + " " + "and Player2's score is " + " " + Player2.score);
                 Loop();
             }
         }
