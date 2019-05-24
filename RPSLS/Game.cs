@@ -9,41 +9,15 @@ namespace RPSLS
     public class Game
     {
         // member variables (HAS A...)
-        //has a PVP
-        //public string playerVersusPlayer;
-        //HAS A P1 SCORE
-        //public int Player1Score;
+
         Player Player1;
         Player Player2;
-
-        //HAS A P2 SCORE
-        //public int Player2Score;
-
-
-        // Constructor(spawner)
-        //ALWAYS HAS PVP;
-        //public Game(string playerVersusPlayer, int player1Score, int player2Score)
-        //{
-        //this.playerVersusPlayer = playerVersusPlayer;
-        //this.player1Score = player1Score;
-        //this.player2Score = player2Score;
-
-
-
-
-        //}
-
-        // Member Methods (CAN DO...)
-        //CAN DO  MASTER RUN FUNCTION();
-        //PICK PLAYER();
 
         public void RunGame()
         {
             int numberOfPlayers = GetNumberOfHumanPlayers();
             SetPlayers(numberOfPlayers);
-
-
-
+            Loop();
         }
         
 
@@ -71,65 +45,101 @@ namespace RPSLS
                 Console.ReadLine();
 
             }
-
-
         }
 
 
-        //public void MakeGestures()
-        //{
-        //    Player.ChooseGesture();
-        //    Player.ChooseGesture();
-        //}
+        public void Loop()
+        {
+            MakeGestures();
+            CompareGestures();
+            DetermineGameWinner();
 
 
+        }
+        public void MakeGestures()
+        {
+            Player1.ChooseGesture();
+            Player2.ChooseGesture();
+
+        }
+
+        public void CompareGestures()
+        {
+            if(Player1.gesture == "rock" && Player2.gesture == "Scissors")
+            {
+                Console.WriteLine("Paper covers rock! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "rock" && Player2.gesture == "Lizard") 
+            {
+                Console.WriteLine("Rock crushes Lizard! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Scissors" && Player2.gesture == "Paper") 
+            {
+                Console.WriteLine("Scissors cuts Paper! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Scissors" && Player2.gesture == "Lizard") 
+            {
+                Console.WriteLine("Scissors cuts Lizard! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Paper" && Player2.gesture == "Rock") 
+            {
+                Console.WriteLine("Paper covers Rock! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Paper" && Player2.gesture == "Spock") 
+            {
+                Console.WriteLine("Paper disproves Spock! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Lizard" && Player2.gesture == "Spock") 
+            {
+                Console.WriteLine("Lizard poisons Spock! Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Lizard" && Player2.gesture == "Paper") 
+            {
+                Console.WriteLine("Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Spock" && Player2.gesture == "Scissors") 
+            {
+                Console.WriteLine("Player 1 wins!");
+                Player1.score++;
+            }
+            else if (Player1.gesture == "Spock" && Player2.gesture == "Rock") 
+            {
+                Console.WriteLine("Player 1 wins!");
+                Player1.score++;
+            }
+            else
+            {
+                Player2.score++;
+            }
+        }
 
 
-        //for loop the following
-        //Player choose gestures();
-        //Compare Gestures ();
-        //P1 ChooseGesture(); FROM PLAYER OBJECT
-        //P2 ChooseGesture(); FROM PLAYER OBJECT
-        //public void GetGesture(string Player.ChooseGesture)
-        //{
-
-        //}
-
-
-        //Determine Victory();
-        //SWITCH CASE THROUGH LIST<T> OPTIONS FOR WIN(); FROM PLAYER OBJECT
-        //IF P1 WINS
-        //{
-        //STORE P1 SCORE ++
-        //}
-        //BREAK;
-        //IF P2 WINS
-        //{
-        //STORE P2 SCORE ++
-        //}
-        //BREAK;
-        //Check Victory();
-        //IF INT P1SCORE = 2
-        //{
-        //P1 WINS
-        //}
-        //BREAK;
-        //IF P1 WINS
-        //{
-        //PROMPT TO RESTART GAME
-        //}
-        //BREAK;
-        //IF INT P2SCORE = 2
-        //{
-        //P2 WINS
-        //}
-        //BREAK;
-        //IF P2 WINS
-        //{
-        //PROMPT TO RESTART GAME
-        //}
-        //BREAK;
-        //DEFAULT....RESTART LOOP;
+        public void DetermineGameWinner()
+        {
+            if (Player1.score > 1)
+            {
+                Console.WriteLine("Player1 has won the match!");
+                Console.ReadLine();
+            }
+            else if (Player2.score > 1)
+            {
+                Console.WriteLine("Player2 has won the match!");
+                Console.ReadLine();
+            }
+            else if(Player1.score <= 1 && Player2.score <= 1)
+            {
+                Console.WriteLine("Player1's score is" + Player1.score + "and Player2's score is " + Player2.score);
+                Loop();
+            }
+        }
     }
 }
 

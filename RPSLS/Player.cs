@@ -23,7 +23,6 @@ namespace RPSLS
         //ALWAYS HAS LIST<T> STRING GESTURE OPTIONS
 
 
-
         public Player(string name)
         {
             this.gestures = new List<string>();
@@ -47,35 +46,15 @@ namespace RPSLS
 
 
         //_______________________________-
-        public void DisplayGestureChoice(string ChooseGesture)
+        public void DisplayGestureChoice()
         {
             
             Console.WriteLine($"{name}'s choice is " + gesture);
             Console.ReadLine();
             
         }
-        public void DisplayComputerGestureChoice()
-        {
-            Console.WriteLine(Computer.ChooseGesture());
-            Computer.ChooseGesture();
+        
 
-        }
-        //CAN DO DISPLAY P2 GESTURE CHOICE();
-
-        //public virtual void DisplayGestureChoiceP2()
-        //    {
-        //        Console.WriteLine("Player 2's choice is " + Human.P2GestureChoice());
-        //    }
-        //    //CAN DO DISPLAY COMPUTER GESTURE CHOICE();
-        //}
-        public void Player1Score()
-        {
-            int[] Player1Score = new int[2];
-        }
-        public void Player2Score()
-        {
-            int[] Player2Score = new int[2];
-        }
     }
 
 }
