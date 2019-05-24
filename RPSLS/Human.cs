@@ -23,9 +23,18 @@ namespace RPSLS
             this.name = name;
         }
 
-        public override void ChooseGesture()
+        public override string ChooseGesture()
         {
+
+            foreach(string gesture in gestures)
+                Console.WriteLine(gesture);
+
+
+            
+                    
             Console.WriteLine("Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
+            Console.ReadLine();
+
             gesture = Console.ReadLine();
         }
 

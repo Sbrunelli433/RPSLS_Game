@@ -10,24 +10,46 @@ namespace RPSLS
     {
         // member variables (HAS A...)
 
-        //Player Child Object
+        Random random;
 
 
         // Constructor(spawner)
         public Computer(string name) : base(name)
         {
             this.name = name;
-
+            random = new Random();
         }
 
         // Member Methods (CAN DO...)
         //CAN DO RANDOM NUMBER GENERATOR FOR GESTURE CHOICE();
 
-        public override void ChooseGesture()
+        public override string ChooseGesture()
         {
-            Random random = new Random();
-            Console.WriteLine("RANDOM: " + random.Next(0, 4));
+
+            int roll = random.Next(0, 4);
+
+            switch(roll)
+            {
+                case 0:
+                    gesture = "rock";
+                    break;
+                case 1:
+                    gesture = "Paper";
+                    break;
+                case 2:
+                    gesture = "Scissors";
+                    break;
+                case 3:
+                    gesture = "Lizard";
+                    break;
+                case 4:
+                    gesture = "Spock";
+                    break;
+            }
+            Console.WriteLine("Player2 chose " + gesture + ". Press enter to continue.");
             Console.ReadLine();
+            return gesture;
+
         }
 
 

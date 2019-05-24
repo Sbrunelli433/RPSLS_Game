@@ -10,10 +10,9 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            //Game game = new Game();
-            //game.RunGame();
-            Computer thing = new Computer("pee pee");
-            thing.ChooseGesture();
+            Game game = new Game();
+            game.RunGame();
+
 
         }
     }

@@ -49,7 +49,7 @@ namespace RPSLS
 
         public int GetNumberOfHumanPlayers()
         {
-            Console.WriteLine("how many human players are there?");
+            Console.WriteLine("How many human players are there? 1 or 2?");
             int numberOfPlayers = int.Parse(Console.ReadLine());
             return numberOfPlayers;
         }
@@ -90,6 +90,10 @@ namespace RPSLS
         //Compare Gestures ();
         //P1 ChooseGesture(); FROM PLAYER OBJECT
         //P2 ChooseGesture(); FROM PLAYER OBJECT
+        //public void GetGesture(string Player.ChooseGesture)
+        //{
+
+        //}
 
 
         //Determine Victory();
