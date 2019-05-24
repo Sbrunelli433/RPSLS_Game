@@ -19,15 +19,22 @@ namespace RPSLS
             SetPlayers(numberOfPlayers);
             Loop();
         }
-        
+
 
         public int GetNumberOfHumanPlayers()
         {
             Console.WriteLine("How many human players are there? 1 or 2?");
             int numberOfPlayers = int.Parse(Console.ReadLine());
+
+            if (numberOfPlayers != 1 && numberOfPlayers != 2)
+            {
+                Console.WriteLine("please enter 1 or 2....NOTHING ELSE OR YOU'LL ALMOST KINDA BREAK THE GAME");
+                GetNumberOfHumanPlayers();
+            }
             return numberOfPlayers;
+            
         }
-        
+
         public void SetPlayers(int numberOfPlayers)
         {
             if (numberOfPlayers == 1)
@@ -43,8 +50,8 @@ namespace RPSLS
                 Player2 = new Human("Player2");
                 Console.WriteLine("This is a multi player game");
                 Console.ReadLine();
-
             }
+
         }
 
 
@@ -67,53 +74,77 @@ namespace RPSLS
         {
             if(Player1.gesture == "rock" && Player2.gesture == "Scissors")
             {
-                Console.WriteLine("Paper covers rock! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
                 Player1.score++;
             }
             else if (Player1.gesture == "rock" && Player2.gesture == "Lizard") 
             {
-                Console.WriteLine("Rock crushes Lizard! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Scissors" && Player2.gesture == "Paper") 
             {
-                Console.WriteLine("Scissors cuts Paper! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Scissors" && Player2.gesture == "Lizard") 
             {
-                Console.WriteLine("Scissors cuts Lizard! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Paper" && Player2.gesture == "Rock") 
             {
                 Console.WriteLine("Paper covers Rock! Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Paper" && Player2.gesture == "Spock") 
             {
-                Console.WriteLine("Paper disproves Spock! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Lizard" && Player2.gesture == "Spock") 
             {
-                Console.WriteLine("Lizard poisons Spock! Player 1 wins!");
+                Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Lizard" && Player2.gesture == "Paper") 
             {
                 Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Spock" && Player2.gesture == "Scissors") 
             {
                 Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
             }
             else if (Player1.gesture == "Spock" && Player2.gesture == "Rock") 
             {
                 Console.WriteLine("Player 1 wins!");
+                Console.ReadLine();
+
                 Player1.score++;
+            }
+            else if (Player1.gesture == Player2.gesture)
+            {
+                Console.WriteLine("both players have the same gesture, it is a tie!");
+                Console.ReadLine();
             }
             else
             {
