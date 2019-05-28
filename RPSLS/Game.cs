@@ -41,14 +41,14 @@ namespace RPSLS
             {
                 Player1 = new Human("Player1");
                 Player2 = new Computer("Player2");
-                Console.WriteLine("This is a single player game");
+                Console.WriteLine("This is a single player game, press Enter to continue.");
                 Console.ReadLine();
             }
             else if (numberOfPlayers == 2)
             {
                 Player1 = new Human("Player1");
                 Player2 = new Human("Player2");
-                Console.WriteLine("This is a multi player game");
+                Console.WriteLine("This is a multi player game, press Enter to continue.");
                 Console.ReadLine();
             }
 
@@ -72,61 +72,61 @@ namespace RPSLS
 
         public void CompareGestures()
         {
-            if(Player1.gesture == "rock" && Player2.gesture == "Scissors")
+            if(Player1.gesture == "rock" && Player2.gesture == "scissors")
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "rock" && Player2.gesture == "Lizard") 
+            else if (Player1.gesture == "rock" && Player2.gesture == "lizard") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Scissors" && Player2.gesture == "Paper") 
+            else if (Player1.gesture == "scissrs" && Player2.gesture == "paper") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Scissors" && Player2.gesture == "Lizard") 
+            else if (Player1.gesture == "scissors" && Player2.gesture == "lizard") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Paper" && Player2.gesture == "Rock") 
+            else if (Player1.gesture == "paper" && Player2.gesture == "rock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Paper" && Player2.gesture == "Spock") 
+            else if (Player1.gesture == "paper" && Player2.gesture == "spock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Lizard" && Player2.gesture == "Spock") 
+            else if (Player1.gesture == "lizard" && Player2.gesture == "spock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Lizard" && Player2.gesture == "Paper") 
+            else if (Player1.gesture == "lizard" && Player2.gesture == "paper") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Spock" && Player2.gesture == "Scissors") 
+            else if (Player1.gesture == "spock" && Player2.gesture == "scissors") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
                 Player1.score++;
             }
-            else if (Player1.gesture == "Spock" && Player2.gesture == "Rock") 
+            else if (Player1.gesture == "spock" && Player2.gesture == "rock") 
             {
                 Console.WriteLine("Player 1 wins!");
                 Console.ReadLine();
@@ -160,7 +160,8 @@ namespace RPSLS
             }
             else if(Player1.score <= 1 && Player2.score <= 1)
             {
-                Console.WriteLine("Player1's score is" + " " + Player1.score + " " + "and Player2's score is " + " " + Player2.score);
+                Console.WriteLine("Player1's score is" + " " + Player1.score + " " + "and Player2's score is " + " " + Player2.score + " " + "Please push enter to continue.");
+                Console.ReadLine();
                 Loop();
             }
         }

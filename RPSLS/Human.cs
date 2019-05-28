@@ -26,24 +26,35 @@ namespace RPSLS
         public override string ChooseGesture()
         {
             List<string> gestures = new List<string>();
-            Console.WriteLine("Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
-            try
+            Console.WriteLine($"{name} Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
+            gesture = Console.ReadLine().ToLower();
+
+            while (gesture != "rock" && gesture != "paper" && gesture != "scissors" && gesture != "lizard" && gesture != "spock")
             {
-                Console.WriteLine("Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
-                Console.ReadLine();
+                Console.WriteLine("invalid input, please choose Rock, Paper, Scissors, Lizard, or Spock");
+                gesture = Console.ReadLine();
             }
-            catch (Exception)
-            {
-                Console.WriteLine("You must choose 'Rock', 'Paper', 'Scissors', 'Lizard', or 'Spock'");
-                ChooseGesture();
-                Console.ReadLine();
-            }
+            return gesture;
+            
+            //try
+            //{
+            //    Console.WriteLine("Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
+            //    Console.ReadLine();
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("Invalid input. You must choose 'Rock', 'Paper', 'Scissors', 'Lizard', or 'Spock'");
+            //    ChooseGesture();
+            //    Console.ReadLine();
+            //}
 
             //_____________________________________
-            Console.WriteLine("Choose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
-            gesture = Console.ReadLine();
+
+
+            //Console.WriteLine($"{name} Chose Gesture: Rock, Paper, Scissors, Lizard, or Spock");
+            //gesture = Console.ReadLine();
             //try catch here
-            return gesture;
+            //return gesture;
 
         }
 

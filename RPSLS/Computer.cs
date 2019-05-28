@@ -46,7 +46,7 @@ namespace RPSLS
                     gesture = "Spock";
                     break;
             }
-            Console.WriteLine("Player2 chose " + gesture + ". Press enter to continue.");
+            Console.WriteLine($"{name} chose " + gesture + ". Press enter to continue.");
             Console.ReadLine();
             return gesture;
 
